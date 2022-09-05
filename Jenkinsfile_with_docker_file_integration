@@ -1,0 +1,16 @@
+pipeline {
+  agent { dockerfile true}
+  stages {
+    stage('source') {
+            steps {
+               git 'https://github.com/MahnoorAli02/jenkins-ecr.git'
+            }
+            
+        }
+    stage('Running Build') {
+      steps {
+        echo 'Successfully build the docker image and running this command inside it!'
+      }
+    }
+  }
+}
